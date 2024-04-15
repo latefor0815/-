@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동물 홈페이지</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <button id="signup">회원가입</button>
+        <button id="login">로그인</button>
+    </header>
+    <div class="container">
+        <img class="animal-img" src="animal1.jpg" alt="동물1">
+        <img class="animal-img" src="animal2.jpg" alt="동물2">
+        <img class="animal-img" src="animal3.jpg" alt="동물3">
+        <img class="animal-img" src="animal4.jpg" alt="동물4">
+        <img class="animal-img" src="animal5.jpg" alt="동물5">
+        <img class="animal-img" src="animal6.jpg" alt="동물6">
+        <img class="animal-img" src="animal7.jpg" alt="동물7">
+        <img class="animal-img" src="animal8.jpg" alt="동물8">
+        <img class="animal-img" src="animal9.jpg" alt="동물9">
+    </div>
+
+    <script>
+        const loginBtn = document.getElementById('login');
+        const signupBtn = document.getElementById('signup');
+        const animalImages = document.querySelectorAll('.animal-img');
+
+        loginBtn.addEventListener('click', () => {
+            window.location.href = 'login.html';
+        });
+
+        signupBtn.addEventListener('click', () => {
+            window.location.href = 'signup.html';
+        });
+
+        animalImages.forEach(img => {
+            img.addEventListener('click', () => {
+                const animalName = img.alt;
+                const searchUrl = `https://ko.wikipedia.org/wiki/${encodeURIComponent(animalName)}`;
+                window.open(searchUrl, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
