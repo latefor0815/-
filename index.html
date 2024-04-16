@@ -3,29 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>동물 홈페이지</title>
+    <title>신기한동물정보</title>
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap')
+        </style>
 </head>
 <body>
+    <h1 class="gamja-flower-regular">신기한동물정보</h1>
     <header>
         <button id="signup">회원가입</button>
         <button id="login">로그인</button>
+        <button id="dona">후원하기</button>
+        
     </header>
+    
+    <div class="notice">
+            <h1>공지사항</h1>
+            <p>세계 동물의 날은 10월 4일 입니다.</p>
+        </div>
     <div class="container">
-        <img class="animal-img" src="animal1.jpg" alt="동물1">
-        <img class="animal-img" src="animal2.jpg" alt="동물2">
-        <img class="animal-img" src="animal3.jpg" alt="동물3">
-        <img class="animal-img" src="animal4.jpg" alt="동물4">
-        <img class="animal-img" src="animal5.jpg" alt="동물5">
-        <img class="animal-img" src="animal6.jpg" alt="동물6">
-        <img class="animal-img" src="animal7.jpg" alt="동물7">
-        <img class="animal-img" src="animal8.jpg" alt="동물8">
-        <img class="animal-img" src="animal9.jpg" alt="동물9">
+        <img class="animal-img" src="./image/ori.jpg" alt="오리너구리">
+        <img class="animal-img" src="./image/dolpin.png" alt="남방고추돌고래">
+        <img class="animal-img" src="./image/hema.jpg" alt="해마">
+        <img class="animal-img" src="./image/bat.jpg" alt="박쥐">
+        <img class="animal-img" src="./image/human.jpg" alt="사람">
+        <img class="animal-img" src="./image/cham.jpg" alt="카멜레온">
+        <img class="animal-img" src="./image/clio.jpg" alt="클리오네">
+        <img class="animal-img" src="./image/orto.jpg" alt="갑오징어">
+        <img class="animal-img" src="./image/bird.png" alt="도요새">
     </div>
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close">&times;</span>
+            <p>감사합니다!</p>
+            <button id="confirmButton">확인</button>
+        </div>
+    </div>
+
 
     <script>
         const loginBtn = document.getElementById('login');
         const signupBtn = document.getElementById('signup');
+        const donateBtn = document.getElementById('dona');
         const animalImages = document.querySelectorAll('.animal-img');
 
         loginBtn.addEventListener('click', () => {
@@ -33,7 +54,11 @@
         });
 
         signupBtn.addEventListener('click', () => {
-            window.location.href = 'signup.html';
+            window.location.href = '회원가입.html';
+        });
+
+        donateBtn.addEventListener('click', () => {
+            document.getElementById('popup').style.display = 'block';
         });
 
         animalImages.forEach(img => {
@@ -42,6 +67,17 @@
                 const searchUrl = `https://ko.wikipedia.org/wiki/${encodeURIComponent(animalName)}`;
                 window.open(searchUrl, '_blank');
             });
+        });
+
+        const closeButton = document.getElementById('close');
+        const confirmButton = document.getElementById('confirmButton');
+
+        closeButton.addEventListener('click', () => {
+            document.getElementById('popup').style.display = 'none';
+        });
+
+        confirmButton.addEventListener('click', () => {
+            window.location.href = 'dona.html';
         });
     </script>
 </body>

@@ -1,32 +1,35 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
 }
 
-header {
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.container header {
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
     width: 100%;
+    margin-bottom: 20px;
+    position: fixed; /* 페이지의 상단에 고정 */
+    top: 0; /* 페이지의 맨 위에 위치 */
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container form {
     max-width: 400px;
-    padding: 40px;
-    border: 5px solid #ccc;
+    padding: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .form-group {
@@ -42,10 +45,6 @@ input {
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
-}
-
-input[type="date"] {
-    padding: 6px;
 }
 
 button {
