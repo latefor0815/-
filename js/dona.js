@@ -11,10 +11,6 @@ closeButton.addEventListener('click', () => {
     popup.style.display = 'none';
 });
 
-confirmButton.addEventListener('click', () => {
-    alert('후원 페이지로 이동합니다.');
-    window.location.href = 'donation.html'; // 후원 페이지로 이동
-});
 document.getElementById('confirmButton').addEventListener('click', function() {
     var amount = document.getElementById('amount').value;
     if(amount === '') {
