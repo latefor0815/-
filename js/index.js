@@ -38,9 +38,9 @@ function createBubble() {
     var bubble = document.createElement('div');
     bubble.classList.add('bubble');
     document.body.appendChild(bubble);
-    var delay = Math.random() * 3000; // 0부터 3000 밀리초 사이의 랜덤한 값
+    var delay = Math.random() * 1500; // 0부터 3000 밀리초 사이의 랜덤한 값
     bubble.style.animationDelay = '-' + delay + 'ms';
 }
 
 // 일정 시간마다 공기방울 생성
-setInterval(createBubble, 2000);
+setInterval(createBubble, 3300);
