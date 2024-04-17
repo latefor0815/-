@@ -7,23 +7,25 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-color: #f2f2f2;
+    background: linear-gradient(to bottom right, #000, #0e6d2a);
+    
 }
 
 h2 {
     text-align: center;
-    color: #333;
+    color: #12abd1;
     position: fixed; /* 페이지의 상단에 고정 */
     top: 0; /* 페이지의 맨 위에 위치 */
     font-style: normal;
     font-size: 75px;
+    font-weight: 100vw;
     text-align: center;
     height: 100px;
 }
 
 p {
     text-align: center;
-    color: #666;
+    color: #dde010;
     margin-top: -40px;
     font-size: 30px;
 }
@@ -36,12 +38,13 @@ p {
 
 label {
     font-weight: bold;
+    color: aqua;
 }
 
 input[type="text"] {
     padding: 8px;
     margin: 0 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #4e16a8;
     border-radius: 5px;
 }
 
@@ -57,3 +60,25 @@ button {
 button:hover {
     background-color: #45a049;
 }
+#clearButton {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px; /* 다른 버튼과의 간격 조절 */
+  }
+  
+  #clearButton:hover {
+    background-color: #d32f2f;
+  }
+  
+  #clearButton:active {
+    background-color: #b71c1c;
+  }
+  
+  #clearButton:focus {
+    outline: none;
+  }
+  

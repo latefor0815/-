@@ -8,8 +8,35 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap')
         </style>
+        <button id="darkModeToggle" class="dark-mode-toggle">★</button>
+
 </head>
 <body>
+    <input id="night_day" type="button" value="night" onclick="
+  var target = document.body;
+  var bgColor, textColor, linkColor;
+
+  if (this.value === 'night') {
+    bgColor = 'black';
+    textColor = 'white';
+    linkColor = 'powderblue';
+    this.value = 'day';
+  } else {
+    bgColor = 'white';
+    textColor = 'black';
+    linkColor = 'blue';
+    this.value = 'night';
+  }
+
+  target.style.backgroundColor = bgColor;
+  target.style.color = textColor;
+
+  var alist = document.querySelectorAll('a');
+  alist.forEach(function(a) {
+    a.style.color = linkColor;
+  });
+">
+
     <h1 class="gamja-flower-regular">신기한동물정보</h1>
     <header>
         <button id="signup">회원가입</button>
@@ -37,48 +64,12 @@
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close" id="close">&times;</span>
-            <p>감사합니다!</p>
+            <p>후원은 어려운동물을 살립니다!</p>
             <button id="confirmButton">확인</button>
         </div>
     </div>
 
 
-    <script>
-        const loginBtn = document.getElementById('login');
-        const signupBtn = document.getElementById('signup');
-        const donateBtn = document.getElementById('dona');
-        const animalImages = document.querySelectorAll('.animal-img');
-
-        loginBtn.addEventListener('click', () => {
-            window.location.href = 'login.html';
-        });
-
-        signupBtn.addEventListener('click', () => {
-            window.location.href = '회원가입.html';
-        });
-
-        donateBtn.addEventListener('click', () => {
-            document.getElementById('popup').style.display = 'block';
-        });
-
-        animalImages.forEach(img => {
-            img.addEventListener('click', () => {
-                const animalName = img.alt;
-                const searchUrl = `https://ko.wikipedia.org/wiki/${encodeURIComponent(animalName)}`;
-                window.open(searchUrl, '_blank');
-            });
-        });
-
-        const closeButton = document.getElementById('close');
-        const confirmButton = document.getElementById('confirmButton');
-
-        closeButton.addEventListener('click', () => {
-            document.getElementById('popup').style.display = 'none';
-        });
-
-        confirmButton.addEventListener('click', () => {
-            window.location.href = 'dona.html';
-        });
-    </script>
+   <script src="./js/index.js"></script>
 </body>
 </html>

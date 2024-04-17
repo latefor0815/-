@@ -59,3 +59,8 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+input[type="text"]:hover, input[type="password"]:hover {
+    border-color: #ccc; /* 호버 시 테두리 색상 변경 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 호버 시 그림자 효과 추가 */
+}
