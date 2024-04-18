@@ -81,4 +81,22 @@ button:hover {
   #clearButton:focus {
     outline: none;
   }
-  
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center; /* 가운데 정렬 */
+    padding: 20px; /* 내부 여백 */
+    background-color: #333; /* 배경색 */
+    font-weight: bolder;
+}
+
+  footer span {
+    color: #ccc;
+    
+  }
+ 
+  .text-muted {
+    color: #ffffff; /* 회색 글씨 */
+    margin: 0;
+  }

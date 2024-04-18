@@ -115,12 +115,12 @@ button:hover {
 }
 
 .dark-mode-toggle {
-    position: fixed;
+    position: fixed;/* 페이지 스크롤에 따라 고정. */
     top: 40px;
     left: 5px;
     background-color: transparent;
     border: none;
-    color: #19b3c7;
+    color: #19b3c7; /* 버튼 텍스트 색상 */
     font-size: 24px;
     cursor: pointer;
     z-index: 1000;
@@ -136,6 +136,9 @@ button:hover {
     cursor: pointer; /* 커서 모양 변경 */
     font-size: 16px; /* 글꼴 크기 */
     transition: background-color 0.3s, color 0.3s; /* 전환 효과 */
+    position: fixed;
+    top: 10px;
+    left: 5px;
   }
   
   #night_day:hover {
@@ -182,3 +185,16 @@ button:hover {
         transform: translateX(calc(-50vw + 50%)); /* 수정 */
     }
 }
+footer {
+    text-align: center; /* 가운데 정렬 */
+    padding: 20px; /* 내부 여백 */
+    background-color: #333; /* 배경색 */
+    font-weight: bolder;
+  }
+  footer span {
+    color: #ccc;
+  }
+
+  .text-muted {
+    color: #ffffff; /* 회색 글씨 */
+  }

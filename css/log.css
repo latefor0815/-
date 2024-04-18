@@ -60,3 +60,21 @@ button {
 button:hover {
     background-color: #45a049;
 }
+footer {
+    position: fixed; /* 페이지 스크롤에 따라 고정됩니다. */
+    bottom: 0; /* 페이지의 아래에 위치합니다. */
+    width: 100%; /* 전체 너비를 차지합니다. */
+    text-align: center; /* 가운데 정렬합니다. */
+    padding: 20px; /* 내부 여백을 추가합니다. */
+    background-color: #333; /* 배경색을 설정합니다. */
+    font-weight: bolder; /* 글꼴을 두껍게 설정합니다. */
+}
+
+footer span {
+    color: #ccc; /* span 요소의 글자 색상을 설정합니다. */
+}
+
+.text-muted {
+    color: #ffffff; /* 텍스트 색상을 설정합니다. */
+    margin: 0; /* 기본 마진을 제거합니다. */
+}
